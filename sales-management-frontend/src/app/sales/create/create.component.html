@@ -1,0 +1,18 @@
+<div class="create-sale">
+    <h2>Create Sale</h2>
+    <form [formGroup]="saleForm" (ngSubmit)="onSubmit()">
+      <label>
+        Customer:
+        <input formControlName="customer" />
+      </label>
+      <label>
+        Total Amount:
+        <input formControlName="totalAmount" type="number" />
+      </label>
+      <label>
+        Date:
+        <input formControlName="date" type="date" />
+      </label>
+      <button type="submit" [disabled]="saleForm.invalid">Submit</button>
+    </form>
+  </div>

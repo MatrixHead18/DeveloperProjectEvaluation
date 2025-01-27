@@ -1,0 +1,74 @@
+.sales-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.sales-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.sales-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sales-actions .action-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sales-actions .action-button:hover {
+  background-color: #0056b3;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sales-table th, .sales-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 0.75rem;
+}
+
+.sales-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.sales-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.sales-table tr:hover {
+  background-color: #ddd;
+}
+
+.sales-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sales-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.sales-links a:hover {
+  text-decoration: underline;
+}

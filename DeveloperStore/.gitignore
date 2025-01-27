@@ -1,0 +1,36 @@
+# Ignore o diretório bin e obj
+/bin/
+/obj/
+
+# Arquivos de configuração do Visual Studio
+.vs/
+.vscode/
+.idea/
+
+# Arquivos do ASP.NET
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# Arquivos gerados por build
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]istPublic/
+
+# Pacotes do NuGet
+/packages/
+
+# Arquivos gerados pelo Visual Studio para macOS
+.vscode/
+.vs2019/
+
+# Arquivos de configuração do Rider
+.idea/
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários do sistema operacional
+Thumbs.db
+ehthumbs.db

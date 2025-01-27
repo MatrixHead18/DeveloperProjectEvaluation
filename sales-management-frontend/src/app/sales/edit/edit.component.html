@@ -1,0 +1,31 @@
+<div class="edit-sale">
+    <h2>Edit Sale</h2>
+    <form [formGroup]="saleForm" (ngSubmit)="onSubmit()">
+      <label>
+        Customer:
+        <input formControlName="customer" />
+      </label>
+      <div *ngIf="saleForm.get('customer')?.invalid && saleForm.get('customer')?.touched">
+        <small>Customer name is required.</small>
+      </div>
+  
+      <label>
+        Total Amount:
+        <input formControlName="totalAmount" type="number" />
+      </label>
+      <div *ngIf="saleForm.get('totalAmount')?.invalid && saleForm.get('totalAmount')?.touched">
+        <small>Total amount must be greater than 0.</small>
+      </div>
+  
+      <label>
+        Date:
+        <input formControlName="date" type="date" />
+      </label>
+      <div *ngIf="saleForm.get('date')?.invalid && saleForm.get('date')?.touched">
+        <small>Date is required.</small>
+      </div>
+  
+      <button type="submit" [disabled]="saleForm.invalid">Save Changes</button>
+    </form>
+  </div>
+  

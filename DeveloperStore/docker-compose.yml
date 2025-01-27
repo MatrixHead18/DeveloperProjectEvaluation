@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: developersalesstore-api
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=DeveloperStoreDb;Username=postgres;Password=admin
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ../sales-management-frontend
+      dockerfile: Dockerfile
+    container_name: sales-frontend
+    ports:
+      - "4200:80"
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:15
+    container_name: salestore-db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: SaleStoreDb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+  postgres_data:

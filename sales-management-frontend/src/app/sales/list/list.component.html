@@ -1,0 +1,25 @@
+<div class="sales-list-container">
+  <table class="sales-table">
+    <thead>
+      <tr>
+        <th>Sale Number</th>
+        <th>Customer</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sale of sales">
+        <td>{{ sale.saleNumber }}</td>
+        <td>{{ sale.customerName }}</td>
+        <td>{{ sale.saleDate | date }}</td>
+        <td>{{ sale.totalAmount | currency }}</td>
+        <td>
+          <button (click)="editSale(sale.id)">Edit</button>
+          <button (click)="deleteSale(sale.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

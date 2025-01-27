@@ -1,0 +1,41 @@
+.details-sale {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  
+    .sale-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  
+      .detail {
+        font-size: 1rem;
+  
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .actions {
+      margin-top: 1rem;
+  
+      button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &.delete {
+          background-color: #dc3545;
+        }
+  
+        &.edit {
+          background-color: #ffc107;
+          color: black;
+        }
+      }
+    }
+  }
