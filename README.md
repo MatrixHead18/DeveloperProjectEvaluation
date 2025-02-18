@@ -1,6 +1,6 @@
 # DeveloperEvaluationProject Solution
 
-Este repositório contém a solução para o projeto **TaxCalculator**, incluindo código-fonte, testes automatizados e configurações para executar o aplicativo em um contêiner Docker. O objetivo é fornecer uma solução escalável e modular para cálculos de impostos com uma cobertura de testes confiável.
+Este repositório contém a solução para o projeto **DeveloperEvaluationProject**, incluindo código-fonte, testes automatizados e configurações para executar o aplicativo em um contêiner Docker.
 
 ---
 
